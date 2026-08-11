@@ -3,7 +3,8 @@ using namespace std;
 
 int main()
 {
-    string name, className; // Declare a string variable to store the user's name
+    string name; // Declare a string variable to store the user's name
+    string className;
 
     cout << "Nhập họ và tên của bạn: ";
     getline(cin, name);
