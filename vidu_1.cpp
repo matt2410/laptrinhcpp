@@ -1,18 +1,31 @@
 #include <iostream>
 using namespace std;
-
 int main()
 {
     int n;
-    cout << "Nhập số n bất kỳ: ";
+    cout << "Nhap so nguyen n: ";
     cin >> n;
-    if (n % 2 == 0)
+    if (n < 2)
     {
-        cout << n << " là số chẵn" << endl;
+        cout << n << " khong phai la so nguyen to." << endl;
+        return 0;
+    }
+    bool isPrime = true;
+    for (int i = 2; i * i <= n; ++i)
+    {
+        if (n % i == 0)
+        {
+            isPrime = false;
+            break;
+        }
+    }
+    if (isPrime)
+    {
+        cout << n << " la so nguyen to." << endl;
     }
     else
     {
-        cout << n << " là số lẻ" << endl;
+        cout << n << " khong phai la so nguyen to." << endl;
     }
     return 0;
 }

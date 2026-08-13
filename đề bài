@@ -1,0 +1,4 @@
+Nhập 1 số n và in ra giá trị tuyệt đối của nó 
+( với n dương thì giá trị tuyệt đối là chính nó và 
+ngược lại 
+nếu n âm thì giá trị tuyệt đối sẽ là âm của chính nó )
