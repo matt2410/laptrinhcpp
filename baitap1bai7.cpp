@@ -27,6 +27,7 @@ int main()
     else
     {
         cout << "Invalid score!!!" << endl;
+        main(); // Call main() again to repeat the process
     }
     return 0;
 }
