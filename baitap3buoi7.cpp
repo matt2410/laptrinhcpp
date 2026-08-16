@@ -24,6 +24,7 @@ int main()
         break;
     default:
         cout << "Invalid grade!!!" << endl;
+        main(); // Call main() again to repeat the process
         break;
     }
     return 0;
