@@ -1,7 +1,3 @@
-// BTVN 2 — Đếm và tính tổng các số chia hết cho 3:
-// Dùng vòng lặp for duyệt từ 1 đến N,
-// Dùng continue để bỏ qua các số không chia hết cho 3,
-// sau đó in ra: số lượng các số chia hết cho 3 và tổng của chúng.
 #include <iostream>
 using namespace std;
 int main()

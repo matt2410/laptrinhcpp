@@ -8,11 +8,12 @@ int main()
     long n;
     cout << "Enter n: ";
     cin >> n;
+    int i = n;
     while (n > 0)
     {
         tong += n % 10; // lay chu so cuoi
         n = n / 10;     // bo chu so cuoi
     }
-    cout << tong << endl;
+    cout << "The sum of the digits of number " << i << " is " << tong << endl;
     return 0;
 }

@@ -9,7 +9,7 @@ int main()
     int n;
     cout << "Enter n (n >= 2): ";
     cin >> n;
-    if (n > 2)
+    if (n >= 2)
     {
         for (int r = 2; r < n; r++)
         {
@@ -23,10 +23,6 @@ int main()
                 cout << n << " is the prime number" << endl;
             }
         }
-    }
-    else if (n == 2)
-    {
-        cout << n << " is the prime number" << endl;
     }
     else
     {
