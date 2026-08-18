@@ -1,10 +1,17 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <iomanip>
 using namespace std;
-#include <string>
 
 int main()
 {
-    string password = "9999";
+    srand(static_cast<unsigned int>(time(0)));
+
+    int password = rand() % 10000; // từ 0 đến 9999
+
+    cout << "Mật khẩu random: " << setw(4) << setfill('0') << password << endl;
+
     for (int i = 0; i <= 9; i++)
     {
         for (int j = 0; j <= 9; j++)
@@ -13,13 +20,18 @@ int main()
             {
                 for (int z = 0; z <= 9; z++)
                 {
-                    if (to_string(i) + to_string(j) + to_string(k) + to_string(z) == password)
+                    int guess = i * 1000 + j * 100 + k * 10 + z;
+
+                    if (guess == password)
                     {
-                        cout << "Your system has been hacked, your password is " << to_string(i) << to_string(j) << to_string(k) << to_string(z) << endl;
+                        cout << "Your system has been hacked, your password is "
+                             << setw(4) << setfill('0') << guess << endl;
+                        return 0;
                     }
                 }
             }
         }
     }
+
     return 0;
 }
