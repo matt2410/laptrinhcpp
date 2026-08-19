@@ -7,14 +7,26 @@
 // Kết thúc in ra người chơi thắng hay thua
 // và số bí mật là bao nhiêu.
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <iomanip>
 using namespace std;
+
 int main()
 {
+    time_t currentTime = time(0);
+
+    unsigned int number =
+        static_cast<unsigned int>(currentTime);
+
+    srand(number);
+    srand(static_cast<unsigned int>(time(0)));
+
+    int secret_num = rand() % 100; // từ 0 đến 9999
     int count = 0, a;
-    int secret_num = 24;
     do
     {
-        cout << "Enter the number you guess from 1 to 100: ";
+        cout << "Enter the number you guess from 01 to 99: ";
         cin >> a;
         count++;
         if (a == secret_num)
