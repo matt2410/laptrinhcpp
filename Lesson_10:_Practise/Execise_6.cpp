@@ -14,7 +14,7 @@ using namespace std;
 
 int main()
 {
-    int n, i = 0, sum;
+    int n, i = 0, sum = 0;
     cout << "Enter n: ";
     cin >> n;
     while (i < n)
@@ -27,7 +27,7 @@ int main()
     }
     if (sum == n)
     {
-        cout << n << " là số hoàn hảo";
+        cout << n << " là số hoàn hảo" << endl;
     }
     else
     {

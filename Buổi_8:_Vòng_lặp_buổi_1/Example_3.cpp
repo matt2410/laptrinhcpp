@@ -2,9 +2,9 @@
 using namespace std;
 int main()
 {
-    int n = 4;
-    // cout << "Enter n: ";
-    // cin >> n;
+    int n;
+    cout << "Enter n: ";
+    cin >> n;
     for (int i = 1; i <= n; i = i + 1)
     {
         if (i % 2 == 0)

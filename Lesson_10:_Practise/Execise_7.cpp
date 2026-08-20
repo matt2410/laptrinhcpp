@@ -8,7 +8,7 @@
 // tức 8 bước.
 // Gợi ý:
 // • Số lần lặp không thể biết trước
-// vì n lúc tăng lúc giảm — hãy chọn loại vòng lặp phù hợp.
+// vì n lúc tăng lúc gieảm — hãy chọn loại vòng lặp phù hợp.
 // • Thử với n = 27 để thấy dãy này có thể dài đến mức nào.
 
 #include <iostream>
