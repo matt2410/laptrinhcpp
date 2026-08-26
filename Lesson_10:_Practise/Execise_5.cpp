@@ -21,8 +21,9 @@ int main()
     cin >> n;
     for (int a = 1; a <= n; a++)
     {
-        sum = sum + sign * (1.0 / a);
-        sign = -sign;
+        // sum = sum + sign * (1.0 / a);
+        // sign = -sign;
+        sum = a % 2 == 0 ? sum - 1.0 / a : sum + 1.0 / a;
     }
     cout << "S = " << fixed << setprecision(4) << sum << endl;
     return 0;
