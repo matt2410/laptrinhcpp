@@ -20,30 +20,36 @@ int main()
         }
     } while (n < 1 || n > 10);
     cout << "Enter " << n << " integer(s):" << endl;
-    int arr[10];
-    int i = n - 1;
+    int a[10];
+    for (int i = 0; i < n; i++)
+    {
+        cin >> a[i];
+    }
 
     // Solution 1:
-    // for (; i >= 0; i = i - 1)
-    // {
-    //     cin >> arr[i];
-    // }
-    // cout << endl;
-    // for (int a = 0; a < n; a++)
-    // {
-    //     cout << arr[a] << endl;
-    // }
-
-    // Solution 2:
-    for (int a = 0; a < n; a++)
+    for (int i = 0; i < n / 2; i++)
     {
-        cin >> arr[a];
+        int temp = a[i];
+        a[i] = a[n - 1 - i];
+        a[n - 1 - i] = temp;
     }
     cout << endl;
-    for (; i >= 0; i = i - 1)
+    for (int i = 0; i < n; i++)
     {
-        cout << arr[i] << endl;
+        cout << a[i] << endl;
     }
+
+    // Solution 2:
+    // for (int i = 0; i < n; i++)
+    // {
+    //     cin >> a[a];
+    // }
+    // cout << endl;
+    // for (; i >= 0; i = i - 1)
+    // {
+    //     cout << a[i] << endl;
+    // }
+
     cout << endl;
     return 0;
 }
