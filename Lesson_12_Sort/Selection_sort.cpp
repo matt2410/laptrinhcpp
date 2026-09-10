@@ -1,4 +1,4 @@
-// bubble sort, selection sort, quick sort, merge sort - mảng hai chiều
+// merge sort
 #include <iostream>
 using namespace std;
 int main()
@@ -13,6 +13,7 @@ int main()
             cout << "The number of students must be between 1 and 10. Please try again." << endl;
         }
     } while (n < 1 || n > 10);
+
     int a[10];
     cout << "Enter the GPA of each student: ";
     for (int i = 0; i < n; i++)
