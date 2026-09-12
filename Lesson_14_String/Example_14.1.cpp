@@ -10,12 +10,13 @@ int main()
     size_t length = hoTenDayDu.length();
     string name = hoTenDayDu;
 
-    size_t viTriCachCuoi = hoTenDayDu.find_last_of(' '); // Tìm khoảng trắng CUỐI CÙNG
+    size_t viTriCachCuoi = hoTenDayDu.find_last_of(' '); 
+    // find the last space character in the full name
     string ho = hoTenDayDu.substr(0, viTriCachCuoi);
     string ten = hoTenDayDu.substr(viTriCachCuoi + 1);
 
-    cout << "Họ: " << ho << endl;
-    cout << "Tên: " << ten << endl;
+    cout << "Surname: " << ho << endl;
+    cout << "First name: " << ten << endl;
 
     std::string text = "Hello, ";
     // string.append(source, startingPosition, numberOfCharacters);
