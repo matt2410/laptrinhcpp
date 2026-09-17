@@ -1,50 +1,61 @@
 #include <iostream>
 using namespace std;
 
-class animal
+class human
 {
-private:
-    int nhipTim;
-    int luongMau;
+
+protected:
+    string name;
+    int age;
 
 public:
-    void run ()
+    human(string name, int age)
     {
-        cout << "con cho dang chay" << endl;
+        this->name = name;
+        this->age = age;
     }
-    void sound()
+    void identification()
     {
-        cout << "go go" << endl;
-    }
-    void ngui()
-    {
-        cout << "Ngui" << endl;
+        cout << "Full name: " << name << endl;
+        cout << "Age: " << age << endl;
     }
 };
 
-class dog
+class employees : public human
 {
 private:
-    int nhipTim;
-    int luongMau;
-    int dooNhayKhuuGiac;
+    int monthlyIncomeInUSD;
 
 public:
-    void run ()
+
+    employees(string name, int age, int monthlyIncomeInUSD) : human(name, age)
     {
-        cout << "con cho dang chay" << endl;
+        cout << "Identification: employee" << endl;
+        this->name = name;
+        this->age = age;
+        this->monthlyIncomeInUSD = monthlyIncomeInUSD;
     }
-    void sound()
+    void identification()
     {
-        cout << "go go" << endl;
+        cout << "Full name: " << name << endl;
+        cout << "Age: " << age << endl;
+        cout << "Monthly income (in USD): " << monthlyIncomeInUSD << endl;
     }
-    void ngui()
+    int increment()
     {
-        cout << "Ngui" << endl;
+        cout << "Increment: ";
+        if (age > 30)
+        {
+            return 0.3 * monthlyIncomeInUSD;
+        }
+        return 0;
     }
 };
 
 int main ()
 {
+    employees julis("Julian Louis", 24, 3000);
+    julis.identification();
+    cout << julis.increment();
     return 0;
 }
