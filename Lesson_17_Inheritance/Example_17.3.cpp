@@ -30,10 +30,6 @@ class character
             cout << "Attack %: " << attack << endl;
             cout << "Defence %: " << defence << endl;
         }
-    // int debuffed ()
-    // {
-    //     return health;
-    // }
 
     virtual void debuffedHealth (int receivedHealthDebuff)
     {
