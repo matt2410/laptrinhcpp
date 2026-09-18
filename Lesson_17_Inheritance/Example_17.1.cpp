@@ -54,7 +54,7 @@ public:
 
 int main ()
 {
-    employees julis("Julian Louis", 24, 3000);
+    employees julis("Julian Louis", 24, 7000);
     julis.identification();
     cout << julis.increment();
     return 0;
