@@ -5,9 +5,16 @@ using namespace std;
  
 int main ()
 {
-    ofstream outFile("out.txt", ios::app);
-    string s;
-    getline(cin, s);
-    outFile << s + "\n";
+    ifstream inFile ("18.3.txt");
+    if (!inFile.is_open())
+    {
+        return 0;
+    }
+    string line;
+    while (getline(inFile, line))
+    {
+        cout << line << endl;
+    }
+    inFile.close();
     return 0;
 }

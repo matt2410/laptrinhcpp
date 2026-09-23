@@ -5,19 +5,18 @@ using namespace std;
  
 int main ()
 {
-    ifstream inFile ("18.2.txt");
-    // is_open() checks whether the file was opened successfully.
+    ifstream inFile ("18.2.txt", ios::in);
     if (!inFile.is_open())
     {
-        cout << "File is not found" << endl;
-        return 0;
+        cout << "Could not open file" << endl;
     }
-    string dong;
-    // getline() reads one complete line from the file.
-    while (getline(inFile, dong))
+    int num;
+    int sum;
+    while (inFile >> num)
     {
-        cout << dong << endl;
+        sum += num;
     }
+    cout << "Sum of the array of number is file: " << sum << endl;
     inFile.close();
     return 0;
 }

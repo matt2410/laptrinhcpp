@@ -6,7 +6,8 @@ using namespace std::string_literals;
 #include <iostream>
 using namespace std;
 
-int main() {
+int main() 
+{
     string email = "nguyenvanan@gmail.com";
     int viTriAt = email.find("@");
     string tenMien = email.substr(viTriAt);
